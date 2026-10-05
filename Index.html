@@ -1,0 +1,536 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Subin T | Portfolio</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #080b16;
+            color: white;
+        }
+
+        /* Navigation */
+
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 20px 8%;
+            background: rgba(8, 11, 22, 0.85);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+        }
+
+        .logo {
+            font-size: 25px;
+            font-weight: bold;
+            color: #00e5ff;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #00e5ff;
+        }
+
+
+        /* Home */
+
+        .home {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 100px 20px;
+            background:
+                radial-gradient(circle at top right, #123c70, transparent 35%),
+                radial-gradient(circle at bottom left, #35105e, transparent 35%),
+                #080b16;
+        }
+
+        .home h1 {
+            font-size: 65px;
+            margin-bottom: 15px;
+        }
+
+        .home h1 span {
+            color: #00e5ff;
+        }
+
+        .home p {
+            font-size: 20px;
+            color: #b8c0d0;
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 13px 28px;
+            border: 2px solid #00e5ff;
+            border-radius: 30px;
+            color: #00e5ff;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #00e5ff;
+            color: #080b16;
+            box-shadow: 0 0 25px #00e5ff;
+        }
+
+
+        /* General Section */
+
+        section {
+            padding: 90px 10%;
+        }
+
+        .title {
+            text-align: center;
+            font-size: 35px;
+            margin-bottom: 50px;
+        }
+
+        .title span {
+            color: #00e5ff;
+        }
+
+
+        /* About */
+
+        .about {
+            max-width: 850px;
+            margin: auto;
+            text-align: center;
+        }
+
+        .about p {
+            color: #b8c0d0;
+            line-height: 1.8;
+            font-size: 18px;
+        }
+
+
+        /* Cards */
+
+        .cards {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 25px;
+        }
+
+        .card {
+            width: 250px;
+            padding: 30px;
+            text-align: center;
+            background: #111625;
+            border: 1px solid #202b42;
+            border-radius: 15px;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            border-color: #00e5ff;
+            box-shadow: 0 0 20px rgba(0, 229, 255, 0.2);
+        }
+
+        .card h3 {
+            color: #00e5ff;
+            margin-bottom: 15px;
+        }
+
+        .card p {
+            color: #b8c0d0;
+            line-height: 1.6;
+        }
+
+
+        /* Skills */
+
+        .skill {
+            margin: 20px auto;
+            max-width: 700px;
+        }
+
+        .skill-name {
+            margin-bottom: 8px;
+        }
+
+        .bar {
+            height: 10px;
+            background: #202638;
+            border-radius: 10px;
+        }
+
+        .progress {
+            height: 10px;
+            background: #00e5ff;
+            border-radius: 10px;
+        }
+
+        .c {
+            width: 75%;
+        }
+
+        .html {
+            width: 90%;
+        }
+
+        .SQL {
+            width: 80%;
+        }
+
+        .problem {
+            width: 70%;
+        }
+
+
+        /* Contact */
+
+        .contact {
+            text-align: center;
+            background: #0d1220;
+        }
+
+        .contact p {
+            color: #b8c0d0;
+            margin: 10px;
+        }
+
+
+        /* Footer */
+
+        footer {
+            text-align: center;
+            padding: 25px;
+            background: #05070e;
+            color: #7f899e;
+        }
+
+
+        /* Mobile */
+
+        @media (max-width: 700px) {
+
+            nav {
+                padding: 15px;
+            }
+
+            nav ul {
+                gap: 10px;
+            }
+
+            nav a {
+                font-size: 13px;
+            }
+
+            .home h1 {
+                font-size: 42px;
+            }
+
+            section {
+                padding: 70px 6%;
+            }
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+
+    <!-- Navigation -->
+
+    <nav>
+
+        <div class="logo">ST.</div>
+
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+
+    </nav>
+
+
+
+    <!-- Home -->
+
+    <section class="home" id="home">
+
+        <div>
+
+            <p>WELCOME TO MY PORTFOLIO</p>
+
+            <h1>Hi, I'm <span>Subin T</span> 👋</h1>
+
+            <p>
+                Student • Programmer • Future Tech Professional
+            </p>
+
+            <a href="#about" class="btn">
+                Explore My Portfolio
+            </a>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- About -->
+
+    <section id="about">
+
+        <h2 class="title">About <span>Me</span></h2>
+
+        <div class="about">
+
+            <p>
+                Hello! I'm Subin T, a student at Rajagiri College
+                of Social Sciences pursuing Integrated MCA.
+                I am interested in technology, programming and
+                learning new things.
+            </p>
+
+            <br>
+
+            <p>
+                I enjoy listening to music, exploring computers
+                and improving my programming skills. I believe
+                that every new skill is another step towards
+                becoming better.
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- Education -->
+
+    <section id="education">
+
+        <h2 class="title">My <span>Education</span></h2>
+
+        <div class="cards">
+
+            <div class="card">
+
+                <h3>🎓 College</h3>
+
+                <p>
+                    Rajagiri College of Social Sciences
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <h3>💻 Course</h3>
+
+                <p>
+                    Integrated MCA
+                    <br><br>
+                    2026 - 2031
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <h3>📚 Current Focus</h3>
+
+                <p>
+                    Programming, Web Development
+                    and Computer Science
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- Skills -->
+
+    <section id="skills">
+
+        <h2 class="title">My <span>Skills</span></h2>
+
+
+        <div class="skill">
+
+            <div class="skill-name">
+                C Programming
+            </div>
+
+            <div class="bar">
+                <div class="progress c"></div>
+            </div>
+
+        </div>
+
+
+        <div class="skill">
+
+            <div class="skill-name">
+                HTML
+            </div>
+
+            <div class="bar">
+                <div class="progress html"></div>
+            </div>
+
+        </div>
+
+
+        <div class="skill">
+
+            <div class="skill-name">
+                SQL
+            </div>
+
+            <div class="bar">
+                <div class="progress SQL"></div>
+            </div>
+
+        </div>
+
+
+        <div class="skill">
+
+            <div class="skill-name">
+                Problem Solving
+            </div>
+
+            <div class="bar">
+                <div class="progress problem"></div>
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- Hobbies -->
+
+    <section>
+
+        <h2 class="title">Things I <span>Love</span></h2>
+
+        <div class="cards">
+
+            <div class="card">
+
+                <h3>🎧 Music</h3>
+
+                <p>
+                    Listening to music is one of my
+                    favourite ways to relax.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <h3>💻 Technology</h3>
+
+                <p>
+                    I enjoy exploring computers and
+                    new technologies.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <h3>🚀 Learning</h3>
+
+                <p>
+                    I like learning new skills and
+                    improving myself.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- Contact -->
+
+    <section class="contact" id="contact">
+
+        <h2 class="title">Let's <span>Connect</span></h2>
+
+        <p>📧 Email: imca2655@rajagiri.edu.com</p>
+
+        <p>📱 Phone: 9037152208</p>
+
+        <br>
+
+        <a href="#home" class="btn">
+            Back to Top ↑
+        </a>
+
+    </section>
+
+
+
+    <!-- Footer -->
+
+    <footer>
+
+        <p>© 2026 Subin T • Personal Portfolio</p>
+
+    </footer>
+
+
+</body>
+</html>
+```
